@@ -14,7 +14,7 @@ formResponses = pandas.read_csv("Secret Santa | Section B ONLY!.csv")
 
 names = formResponses['Name'].tolist()
 emails = formResponses['Username'].tolist()
-
+budget = 200
 
 # EMAIL SERVER
 try:
@@ -69,7 +69,7 @@ for i in range(len(emails)):
                 f"To: {emailToSendTo}",
                 "Subject: Your Secret Santa Name!",
                 "",
-                f'''Hi! Here's the name you got for secret santa: {nameToSend}. The Maximum Budget is 200 rupees. Happy Gifting!
+                f'''Hi! Here's the name you got for secret santa: {nameToSend}. The Maximum Budget is {budget} rupees. Happy Gifting!
                 '''
                 ])
     try:
